@@ -1,8 +1,8 @@
 {
-  "name": "laravel-vue-pagination",
+  "name": "@walidbagh/laravel-vue-pagination",
   "version": "3.0.0",
   "description": "Vue.js pagination component for Laravel paginators and Bootstrap styles",
-  "author": "walidbagh <7133090+walidbagh@users.noreply.github.com>",
+  "author": "walidbagh <walidbagh@gmail.com>",
   "homepage": "https://github.com/walidbagh/laravel-vue-pagination",
   "license": "MIT",
   "keywords": [
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/walidbagh/laravel-vue-pagination.git"
+    "url": "git+https://github.com/walidbagh/laravel-vue-pagination.git"
   },
   "main": "dist/laravel-vue-pagination.common.js",
   "scripts": {
@@ -51,5 +51,11 @@
     "typescript": "~3.9.3",
     "vue": "^3.2.0",
     "vue-jest": "^5.0.0-0"
+  },
+  "bugs": {
+    "url": "https://github.com/walidbagh/laravel-vue-pagination/issues"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
