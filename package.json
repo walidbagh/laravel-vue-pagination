@@ -1,9 +1,9 @@
 {
   "name": "laravel-vue-pagination",
-  "version": "2.3.2",
+  "version": "3.0.0",
   "description": "Vue.js pagination component for Laravel paginators and Bootstrap styles",
-  "author": "Gilbert Pellegrom <gilbert@pellegrom.me>",
-  "homepage": "https://github.com/gilbitron/laravel-vue-pagination",
+  "author": "walidbagh <7133090+walidbagh@users.noreply.github.com>",
+  "homepage": "https://github.com/walidbagh/laravel-vue-pagination",
   "license": "MIT",
   "keywords": [
     "vue",
@@ -14,31 +14,42 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/gilbitron/laravel-vue-pagination.git"
+    "url": "https://github.com/walidbagh/laravel-vue-pagination.git"
   },
   "main": "dist/laravel-vue-pagination.common.js",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build --target lib src/LaravelVuePagination.vue",
     "lint": "vue-cli-service lint",
-    "test": "vue-cli-service test:unit",
+    "deploy": "npm run now-build && now && now alias",
     "now-build": "vue-cli-service build",
-    "deploy": "npm run now-build && now && now alias"
+    "test": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.4.1",
-    "@vue/cli-plugin-eslint": "^3.4.1",
-    "@vue/cli-plugin-unit-jest": "^3.4.1",
-    "@vue/cli-service": "^3.4.1",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "@vue/test-utils": "^1.0.0-beta.29",
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "^5.0.0-rc.1",
+    "@vue/cli-plugin-eslint": "^5.0.0-rc.1",
+    "@vue/cli-plugin-unit-jest": "^4.5.15",
+    "@vue/cli-service": "^5.0.0-rc.1",
+    "@vue/compiler-sfc": "^3.2.0",
+    "@vue/eslint-config-standard": "^6.1.0",
+    "@vue/test-utils": "^2.0.0-rc.16",
+    "@vue/vue3-jest": "^27.0.0-alpha.3",
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "bootstrap": "^4.3.1",
-    "eslint": "^5.14.1",
-    "eslint-plugin-vue": "^5.2.2",
-    "vue": "^2.6.7",
-    "vue-template-compiler": "^2.6.7"
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "jest": "^27.1.0",
+    "typescript": "~3.9.3",
+    "vue": "^3.2.0",
+    "vue-jest": "^5.0.0-0"
   }
 }

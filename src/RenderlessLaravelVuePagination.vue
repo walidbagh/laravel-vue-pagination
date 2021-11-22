@@ -1,5 +1,9 @@
 <script>
 export default {
+    inheritAttrs: false,
+    // compatConfig: {
+    //     RENDER_FUNCTION: false
+    // },
     props: {
         data: {
             type: Object,
@@ -72,16 +76,16 @@ export default {
                 return this.lastPage;
             }
 
-            var current = this.currentPage;
-            var last = this.lastPage;
-            var delta = this.limit;
-            var left = current - delta;
-            var right = current + delta + 1;
-            var range = [];
-            var pages = [];
-            var l;
+            const current = this.currentPage;
+            const last = this.lastPage;
+            const delta = this.limit;
+            const left = current - delta;
+            const right = current + delta + 1;
+            const range = [];
+            const pages = [];
+            let l;
 
-            for (var i = 1; i <= last; i++) {
+            for (let i = 1; i <= last; i++) {
                 if (i === 1 || i === last || (i >= left && i < right)) {
                     range.push(i);
                 }
@@ -120,7 +124,7 @@ export default {
     },
 
     render () {
-        return this.$scopedSlots.default({
+        return this.$slots.default({
             data: this.data,
             limit: this.limit,
             showDisabled: this.showDisabled,
