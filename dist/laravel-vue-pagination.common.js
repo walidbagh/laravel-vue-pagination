@@ -1,113 +1,8 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "fb15");
-/******/ })
-/************************************************************************/
-/******/ ({
+/******/ (function() { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-/***/ "6b0d":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-// runtime helper for setting properties on components
-// in a tree-shakable way
-exports.default = (sfc, props) => {
-    const target = sfc.__vccOpts || sfc;
-    for (const [key, val] of props) {
-        target[key] = val;
-    }
-    return target;
-};
-
-
-/***/ }),
-
-/***/ "8875":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 679:
+/***/ (function(module, exports) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// addapted from the document.currentScript polyfill by Adam Miller
 // MIT license
@@ -118,9 +13,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 (function (root, factory) {
   if (true) {
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
   } else {}
 }(typeof self !== 'undefined' ? self : this, function () {
   function getCurrentScript () {
@@ -191,27 +86,94 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ "8bbf":
-/***/ (function(module, exports) {
-
-module.exports = require("vue");
-
-/***/ }),
-
-/***/ "fb15":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 744:
+/***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
+var __webpack_unused_export__;
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+__webpack_unused_export__ = ({ value: true });
+// runtime helper for setting properties on components
+// in a tree-shakable way
+exports.Z = (sfc, props) => {
+    const target = sfc.__vccOpts || sfc;
+    for (const [key, val] of props) {
+        target[key] = val;
+    }
+    return target;
+};
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	!function() {
+/******/ 		__webpack_require__.p = "";
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+!function() {
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": function() { return /* binding */ entry_lib; }
+});
+
+;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+/* eslint-disable no-var */
 // This file is imported into lib/wc client bundles.
 
 if (typeof window !== 'undefined') {
   var currentScript = window.document.currentScript
   if (true) {
-    var getCurrentScript = __webpack_require__("8875")
+    var getCurrentScript = __webpack_require__(679)
     currentScript = getCurrentScript()
 
     // for backward compatibility, because previously we directly included the polyfill
@@ -229,18 +191,17 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
-var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/LaravelVuePagination.vue?vue&type=template&id=7f71b5a7
+;// CONCATENATED MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??ref--14-1!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/dist/index.js??ref--1-1!./src/LaravelVuePagination.vue?vue&type=template&id=3fbb5294
 
 var _hoisted_1 = ["tabindex"];
 
-var _hoisted_2 = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("span", {
+var _hoisted_2 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", {
   "aria-hidden": "true"
 }, "«", -1);
 
-var _hoisted_3 = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("span", {
+var _hoisted_3 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", {
   class: "sr-only"
 }, "Previous", -1);
 
@@ -250,18 +211,18 @@ var _hoisted_4 = {
 };
 var _hoisted_5 = ["tabindex"];
 
-var _hoisted_6 = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("span", {
+var _hoisted_6 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", {
   "aria-hidden": "true"
 }, "»", -1);
 
-var _hoisted_7 = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("span", {
+var _hoisted_7 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", {
   class: "sr-only"
 }, "Next", -1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_renderless_laravel_vue_pagination = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("renderless-laravel-vue-pagination");
+  var _component_renderless_laravel_vue_pagination = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.resolveComponent)("renderless-laravel-vue-pagination");
 
-  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(_component_renderless_laravel_vue_pagination, {
+  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createBlock)(_component_renderless_laravel_vue_pagination, {
     data: $props.data,
     limit: $props.limit,
     "show-disabled": $props.showDisabled,
@@ -269,59 +230,71 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     align: $props.align,
     onPaginationChangePage: $options.onPaginationChangePage
   }, {
-    default: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withCtx"])(function () {
-      return [_ctx.computed.total > _ctx.computed.perPage ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("ul", {
+    default: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.withCtx)(function (_ref) {
+      var data = _ref.data,
+          limit = _ref.limit,
+          showDisabled = _ref.showDisabled,
+          size = _ref.size,
+          align = _ref.align,
+          computed = _ref.computed,
+          prevButtonEvents = _ref.prevButtonEvents,
+          nextButtonEvents = _ref.nextButtonEvents,
+          pageButtonEvents = _ref.pageButtonEvents;
+      return [computed.total > computed.perPage ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("ul", {
         key: 0,
-        class: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeClass"])(["pagination", {
-          'pagination-sm': $props.size == 'small',
-          'pagination-lg': $props.size == 'large',
-          'justify-content-center': $props.align == 'center',
-          'justify-content-end': $props.align == 'right'
-        }]),
-        "slot-scope": "{ data, limit, showDisabled, size, align, computed, prevButtonEvents, nextButtonEvents, pageButtonEvents }"
-      }, [_ctx.computed.prevPageUrl || $props.showDisabled ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("li", {
-        key: 0,
-        class: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeClass"])(["page-item pagination-prev-nav", {
-          'disabled': !_ctx.computed.prevPageUrl
+        class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["pagination", {
+          'pagination-sm': size == 'small',
+          'pagination-lg': size == 'large',
+          'justify-content-center': align == 'center',
+          'justify-content-end': align == 'right'
         }])
-      }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("a", Object(external_commonjs_vue_commonjs2_vue_root_Vue_["mergeProps"])({
+      }, [computed.prevPageUrl || showDisabled ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("li", {
+        key: 0,
+        class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["page-item pagination-prev-nav", {
+          'disabled': !computed.prevPageUrl
+        }])
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("a", (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.mergeProps)({
         class: "page-link",
         href: "#",
         "aria-label": "Previous",
-        tabindex: !_ctx.computed.prevPageUrl && -1
-      }, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toHandlers"])(_ctx.prevButtonEvents)), [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderSlot"])(_ctx.$slots, "prev-nav", {}, function () {
+        tabindex: !computed.prevPageUrl && -1
+      }, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toHandlers)(prevButtonEvents)), [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.renderSlot)(_ctx.$slots, "prev-nav", {}, function () {
         return [_hoisted_2, _hoisted_3];
-      })], 16, _hoisted_1)], 2)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])(_ctx.computed.pageRange, function (page, key) {
-        return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("li", {
-          class: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeClass"])(["page-item pagination-page-nav", {
-            'active': page == _ctx.computed.currentPage
+      })], 16, _hoisted_1)], 2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(true), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.Fragment, null, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.renderList)(computed.pageRange, function (page, key) {
+        return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("li", {
+          class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["page-item pagination-page-nav", {
+            'active': page == computed.currentPage
           }]),
           key: key
-        }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("a", Object(external_commonjs_vue_commonjs2_vue_root_Vue_["mergeProps"])({
+        }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("a", (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.mergeProps)({
           class: "page-link",
           href: "#"
-        }, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toHandlers"])(_ctx.pageButtonEvents(page))), [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createTextVNode"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(page) + " ", 1), page == _ctx.computed.currentPage ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("span", _hoisted_4, "(current)")) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)], 16)], 2);
-      }), 128)), _ctx.computed.nextPageUrl || $props.showDisabled ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("li", {
+        }, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toHandlers)(pageButtonEvents(page))), [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(page) + " ", 1), page == computed.currentPage ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("span", _hoisted_4, "(current)")) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)], 16)], 2);
+      }), 128)), computed.nextPageUrl || showDisabled ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("li", {
         key: 1,
-        class: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeClass"])(["page-item pagination-next-nav", {
-          'disabled': !_ctx.computed.nextPageUrl
+        class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["page-item pagination-next-nav", {
+          'disabled': !computed.nextPageUrl
         }])
-      }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("a", Object(external_commonjs_vue_commonjs2_vue_root_Vue_["mergeProps"])({
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("a", (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.mergeProps)({
         class: "page-link",
         href: "#",
         "aria-label": "Next",
-        tabindex: !_ctx.computed.nextPageUrl && -1
-      }, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toHandlers"])(_ctx.nextButtonEvents)), [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderSlot"])(_ctx.$slots, "next-nav", {}, function () {
+        tabindex: !computed.nextPageUrl && -1
+      }, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toHandlers)(nextButtonEvents)), [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.renderSlot)(_ctx.$slots, "next-nav", {}, function () {
         return [_hoisted_6, _hoisted_7];
-      })], 16, _hoisted_5)], 2)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)], 2)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)];
-    }, undefined, true),
+      })], 16, _hoisted_5)], 2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)], 2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)];
+    }),
     _: 3
   }, 8, ["data", "limit", "show-disabled", "size", "align", "onPaginationChangePage"]);
 }
-// CONCATENATED MODULE: ./src/LaravelVuePagination.vue?vue&type=template&id=7f71b5a7
+;// CONCATENATED MODULE: ./src/LaravelVuePagination.vue?vue&type=template&id=3fbb5294
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/RenderlessLaravelVuePagination.vue?vue&type=script&lang=js
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??ref--14-1!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/dist/index.js??ref--1-1!./src/RenderlessLaravelVuePagination.vue?vue&type=script&lang=js
 /* harmony default export */ var RenderlessLaravelVuePaginationvue_type_script_lang_js = ({
+  inheritAttrs: false,
+  // compatConfig: {
+  //     RENDER_FUNCTION: false
+  // },
   props: {
     data: {
       type: Object,
@@ -350,6 +323,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }
   },
+  emits: ['pagination-change-page'],
   computed: {
     isApiResource: function isApiResource() {
       return !!this.data.meta;
@@ -487,16 +461,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     });
   }
 });
-// CONCATENATED MODULE: ./src/RenderlessLaravelVuePagination.vue?vue&type=script&lang=js
+;// CONCATENATED MODULE: ./src/RenderlessLaravelVuePagination.vue?vue&type=script&lang=js
  
-// CONCATENATED MODULE: ./src/RenderlessLaravelVuePagination.vue
+;// CONCATENATED MODULE: ./src/RenderlessLaravelVuePagination.vue
 
 
 
 const __exports__ = RenderlessLaravelVuePaginationvue_type_script_lang_js;
 
 /* harmony default export */ var RenderlessLaravelVuePagination = (__exports__);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/LaravelVuePagination.vue?vue&type=script&lang=js
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??ref--14-1!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/dist/index.js??ref--1-1!./src/LaravelVuePagination.vue?vue&type=script&lang=js
 
 /* harmony default export */ var LaravelVuePaginationvue_type_script_lang_js = ({
   props: {
@@ -527,6 +501,7 @@ const __exports__ = RenderlessLaravelVuePaginationvue_type_script_lang_js;
       }
     }
   },
+  emits: ['pagination-change-page'],
   methods: {
     onPaginationChangePage: function onPaginationChangePage(page) {
       this.$emit('pagination-change-page', page);
@@ -536,29 +511,27 @@ const __exports__ = RenderlessLaravelVuePaginationvue_type_script_lang_js;
     RenderlessLaravelVuePagination: RenderlessLaravelVuePagination
   }
 });
-// CONCATENATED MODULE: ./src/LaravelVuePagination.vue?vue&type=script&lang=js
+;// CONCATENATED MODULE: ./src/LaravelVuePagination.vue?vue&type=script&lang=js
  
-// EXTERNAL MODULE: ./node_modules/vue-loader-v16/dist/exportHelper.js
-var exportHelper = __webpack_require__("6b0d");
-var exportHelper_default = /*#__PURE__*/__webpack_require__.n(exportHelper);
-
-// CONCATENATED MODULE: ./src/LaravelVuePagination.vue
+// EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
+var exportHelper = __webpack_require__(744);
+;// CONCATENATED MODULE: ./src/LaravelVuePagination.vue
 
 
 
 
-
-const LaravelVuePagination_exports_ = /*#__PURE__*/exportHelper_default()(LaravelVuePaginationvue_type_script_lang_js, [['render',render]])
+;
+const LaravelVuePagination_exports_ = /*#__PURE__*/(0,exportHelper/* default */.Z)(LaravelVuePaginationvue_type_script_lang_js, [['render',render]])
 
 /* harmony default export */ var LaravelVuePagination = (LaravelVuePagination_exports_);
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (LaravelVuePagination);
+/* harmony default export */ var entry_lib = (LaravelVuePagination);
 
 
-
-/***/ })
-
-/******/ })["default"];
+}();
+module.exports = __webpack_exports__["default"];
+/******/ })()
+;
 //# sourceMappingURL=laravel-vue-pagination.common.js.map

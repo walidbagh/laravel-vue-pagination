@@ -1,8 +1,8 @@
 import { mount } from '@vue/test-utils'
 import LaravelVuePagination from '@/LaravelVuePagination.vue';
 
-function getComponent(Component, propsData) {
-    const wrapper = mount(Component, { propsData: propsData });
+function getComponent(Component, props) {
+    const wrapper = mount(Component, { props: props });
     return wrapper;
 }
 
@@ -152,7 +152,7 @@ describe('LaravelVuePagination', function() {
 
     it('has correct DOM structure when using slots', function() {
         const wrapper = mount(LaravelVuePagination, {
-            propsData: { data: exampleData },
+            props: { data: exampleData },
             slots: {
                 'prev-nav': '<span class="custom-prev-nav">Previous</span>',
                 'next-nav': '<span>Next</span>'

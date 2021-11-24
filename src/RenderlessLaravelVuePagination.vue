@@ -33,6 +33,10 @@ export default {
         }
     },
 
+    emits: [
+        'pagination-change-page'
+    ],
+
     computed: {
         isApiResource () {
             return !!this.data.meta;

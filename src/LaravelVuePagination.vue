@@ -80,6 +80,10 @@ export default {
         }
     },
 
+    emits: [
+        'pagination-change-page'
+    ],
+
     methods: {
         onPaginationChangePage (page) {
             this.$emit('pagination-change-page', page);
